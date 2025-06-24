@@ -1,7 +1,8 @@
-describe('Admin Login', () => {
+describe('Admin Login page', () => {
   it('login', () => {
     cy.visit('https://dps-admin-ui.qa.interswitchng.com/')
-    cy.get(':nth-child(2) > .MuiInputBase-root > .MuiInputBase-input').click('olamide.john@interswitchng.com');
-    cy.get(':nth-child(3) > .MuiInputBase-root > .MuiInputBase-input').click('Testqa1101!@#$%^')
+    cy.get('input[type="email"]').type('olamide.john@interswitchng.com');
+    cy.get('.MuiInputBase-root.css-1mbvqtf').find('input[type="password"]').type('Testqa1101!@#$%^');
+    cy.get('button[type="submit"]').click();
   })
 })
