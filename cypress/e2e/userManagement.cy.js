@@ -1,4 +1,4 @@
-describe('Corporate Regression', () => {
+describe('User Management', () => {
 
   beforeEach(() => {
     // Visit and log in before each test
@@ -9,7 +9,7 @@ describe('Corporate Regression', () => {
     cy.get('button[type="submit"]').click();
   });
 
-  it('User Management', () => {
+  it('Add Profile', () => {
     cy.get('[data-testid="GridViewIcon"]').click();
     cy.get('.MuiInputBase-input').clear('re');
     cy.get('.MuiInputBase-input').type('regression');
@@ -29,5 +29,11 @@ describe('Corporate Regression', () => {
     cy.get('[data-testid="PlayCircleFilledWhiteIcon"]',{timeout:30000}).eq(1).click({ force: true })
     cy.get('.MuiSwitch-root > .MuiButtonBase-root > .PrivateSwitchBase-input').check();
     cy.get('.MuiSwitch-root > .MuiButtonBase-root > .PrivateSwitchBase-input').check();
-  });
-})
+  });/*
+  it('Edit Profile', () => {
+    cy.get('[data-testid="GridViewIcon"]').click();
+    cy.get('.MuiInputBase-input').clear('re');
+    cy.get('.MuiInputBase-input').type('regression');
+    cy.get('.MuiCardContent-root').click();*/
+
+});
