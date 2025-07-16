@@ -1,15 +1,17 @@
-
+/// <reference types="cypress" />
 
 
 describe('Admin Login page', () => {
 
   beforeEach(() => {
     // Visit and log in before each test
-    cy.visit('https://dps-admin-ui.qa.interswitchng.com/');
-
-    cy.get('input[type="email"]').type('olamide.john@interswitchng.com');
-    cy.get('.MuiInputBase-root.css-1mbvqtf').find('input[type="password"]').type('Testqa1101!@#$%^');
-    cy.get('button[type="submit"]').click();
+        const username = 'olamide.john@interswitchng.com';
+        const password = 'Testqa1101!@#$%^';
+       
+           loginPage.visit();
+           loginPage.enterUsername(username);
+           loginPage.enterPassword(password);
+           loginPage.clickLogin();
   });
 
   it('Dashboard interactions', () => {
