@@ -11,3 +11,30 @@ module.exports = {
     },
   },
 };
+const { defineConfig } = require("cypress");
+
+module.exports = defineConfig({
+  projectId: '3b8kd4', // Your Cypress Dashboard project ID
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions":{
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions":{
+      "reportDir":"cypress/reports/mocha",
+      "quiet": true,
+      "overwrite": false,
+      "html":false,
+      "json": true
+
+    }
+  },
+
+  e2e: {
+    // Setup Node events (plugins)
+    setupNodeEvents(on, config) {
+      return require('./cypress/plugins/index.js')(on, config);
+    },
+
+    // Path to your custom support file
+    supportFile: "cypress/support/e2e.js",
+  },
+});
