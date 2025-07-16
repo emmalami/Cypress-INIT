@@ -19,10 +19,8 @@
   "homepage": "https://github.com/emmalami/Cypress-INIT#readme",
   "devDependencies": {
     "cypress": "^14.5.1"
-  }
-}
-{
-  "name": "cypress_udemy",
+  },
+  "name": "cypress-init",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

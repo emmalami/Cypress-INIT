@@ -1,12 +1,16 @@
-// cypress/e2e/orangehrm/loginTest.cy.js
-import LoginPage from 'C:\Users\olamide.john\Documents\Cypress INIT\cypress\e2e\Pages'
+/// <reference types="cypress" />
 
-describe('Admin Corporate - POM', () => {
+        import loginPage from '../Pages/loginPage';
+
+describe('User Management', () => {
   it('Login using POM structure', () => {
-    LoginPage.visit();
-    LoginPage.enterUsername(username);
-    LoginPage.enterPassword(password);
-    LoginPage.clickLogin();
-    LoginPage.verifyDashboardVisible(); // Optional verification
+    const username = 'olamide.john@interswitchng.com';
+    const password = 'Testqa1101!@#$%^';
+
+    loginPage.visit("");
+    loginPage.enterUsername(username);
+    loginPage.enterPassword(password);
+    loginPage.clickLogin();
+    
   });
 });
