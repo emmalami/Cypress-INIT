@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/emmalami/Cypress-INIT/issues"
   },
-  "homepage": "https://github.com/emmalami/Cypress-INIT#readme"
+  "homepage": "https://github.com/emmalami/Cypress-INIT#readme",
+  "devDependencies": {
+    "cypress": "^14.5.1"
+  }
 }
