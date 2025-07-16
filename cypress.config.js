@@ -38,3 +38,12 @@ module.exports = defineConfig({
     supportFile: "cypress/support/e2e.js",
   },
 });
+
+"cypress": "^14.2.0",
+        "cypress-multi-reporters": "^2.0.5",
+        "mocha": "^11.4.0",
+        "mochawesome": "^7.1.3",
+        "mochawesome-merge": "^5.0.0",
+        "mochawesome-report-generator": "^6.2.0",
+        "xlsx": "^0.18.5",
+        "xpath": "^0.0.34"
