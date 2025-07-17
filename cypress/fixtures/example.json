@@ -3,3 +3,5 @@
   "validPassword": "test123",
   "validPhoneNumber": "08067934550"
 }
+
+// docker run -it -v C:/ProgramData/DockerDesktop:/app cypress/included:latest cypress run

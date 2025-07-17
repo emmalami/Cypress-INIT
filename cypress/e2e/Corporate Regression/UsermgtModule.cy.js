@@ -1,12 +1,17 @@
+/// <reference types="cypress" />
+ import loginPage from '../Pages/loginPage';
+
 describe('User Management', () => {
 
   beforeEach(() => {
     // Visit and log in before each test
-    cy.visit('https://dps-admin-ui.qa.interswitchng.com/');
-
-    cy.get('input[type="email"]').type('olamide.john@interswitchng.com');
-    cy.get('.MuiInputBase-root.css-1mbvqtf').find('input[type="password"]').type('Testqa1101!@#$%^');
-    cy.get('button[type="submit"]').click();
+        const username = 'olamide.john@interswitchng.com';
+        const password = 'Testqa1101!@#$%^';
+       
+           loginPage.visit();
+           loginPage.enterUsername(username);
+           loginPage.enterPassword(password);
+           loginPage.clickLogin();
   });
 
   it('Add Profile', () => {
@@ -36,26 +41,4 @@ describe('User Management', () => {
     cy.get('.MuiInputBase-input').type('regression');
     cy.get('.MuiCardContent-root').click();*/
 
-});
-import LandingPage from "../e2e/Pages/LandingPage";
-import LandingPage from "../e2e/Pages/LoginPage";
-
-/// <reference types="Cypress" />
-
-describe('Ecommerce Website', () => {
-    beforeEach(() => {
-      // Visit the website before each test
-      
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-      cy.wait
-    });
-    it('SignUp', () => {    
-          cy.get('[name="username"]').type('Admin');
-          cy.get('[name="password"]').type('admin123');
-          cy.get('[type="submit"]').click();
-          cy.get(':nth-child(1) > .oxd-main-menu-item > .oxd-text').click();
-          cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text-input').select('ESS');
-          cy.get('button[type="submit"]').click()
-         
-    });
 });

@@ -1,17 +1,18 @@
 /// <reference types="cypress" />
 
-
-describe('Admin Login page', () => {
-
-  beforeEach(() => {
-    // Visit and log in before each test
-        const username = 'olamide.john@interswitchng.com';
-        const password = 'Testqa1101!@#$%^';
-       
-           loginPage.visit();
-           loginPage.enterUsername(username);
-           loginPage.enterPassword(password);
-           loginPage.clickLogin();
+               import loginPage from '../Pages/loginPage';
+           
+ describe('User Management', () => {
+           
+      beforeEach(() => {
+               // Visit and log in before each test
+                const username = 'olamide.john@interswitchng.com';
+                const password = 'Testqa1101!@#$%^';
+               
+                   loginPage.visit();
+                   loginPage.enterUsername(username);
+                   loginPage.enterPassword(password);
+                   loginPage.clickLogin();
   });
 
   it('Dashboard interactions', () => {

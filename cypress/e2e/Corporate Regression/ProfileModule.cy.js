@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-         import loginPage from '..Pages/loginPage';
+         import loginPage from '../Pages/loginPage';
 
 describe('User Management', () => {
 

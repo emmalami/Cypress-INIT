@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-        import loginPage from '../e2e/Pages/loginPage';
+        import loginPage from '../Pages/loginPage';
 
 describe('User Management', () => {
   it('Login using POM structure', () => {
